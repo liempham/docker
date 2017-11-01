@@ -11,8 +11,9 @@ RUN yum -y install epel-release && \
     yum -y --setopt=tsflags=nodocs update && \
     yum -y --setopt=tsflags=nodocs install httpd && \
     yum -y install nodejs && \ 
-    yum -y install gcc-c++ make && \
+    npm install pm2 -g && \
     yum -y install yarn && \
+    yum -y install gcc-c++ make && \
     yum -y install mod_php71u php71u-cli php71u-common php71u-json php71u-mbstring php71u-mysqlnd && \
     curl -k -sS https://getcomposer.org/installer | php && \
     mv composer.phar /usr/local/bin/composer && \
